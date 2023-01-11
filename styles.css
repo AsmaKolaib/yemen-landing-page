@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100hv;
+    background-color: #B49355;
+    overflow: hidden;
+}
+@font-face {
+    font-family: GrandSlang;
+    src: url("./fonts/GrandSlang-Roman.ttf");
+  }
+  
+.container-items {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item {
+    position: relative;
+    flex-grow: 1;
+    font-family: "GrandSlang";
+    font-size: 60px;
+    transition: all 300ms ease-in-out;
+    text-align: center;
+}
+
+.item:hover {
+    flex-grow: 2;
+    font-size: 120px;
+}
+.item:hover h3 {
+color: white;
+}
+
+h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+
+}
+
+img {
+    width: 100%;
+}
+
+.container-img-wrap {
+	position: absolute;
+	top: -35rem;
+	left: -150px;
+	width: 400px;
+	height: 200px;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.container-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    top: 50px;
+    left: 0;
+}
+.navbar img{
+    width: 200px;
+    height: 40px;
+}
+
+.site-menu {
+      display: block;
+      position: relative;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+.menu-item {
+    margin-left: 60px;
+}
+
+.site-menu span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background:#4D4D4D;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.site-menu span:first-child
+{
+width: 33px;
+}
+.site-menu span:nth-last-child(2)
+{
+width: 26px;
+}
+.site-menu span:last-child{
+    width:20px;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 20%;
+    padding: 40px;
+    text-transform: uppercase;
+    font-family: "GrandSlang";
+    font-size: 60px;
+    z-index: 2;
+}
+
+.header-left span {
+    font-size: 70px;
+    font-weight: 700;
+    font-family: inherit;
+}
+.header-right{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+}
+
+@media (max-width:900px) {
+    .container-items {
+        height: 100px;
+    }
+
+    .item {
+        font-size: 20px;
+    }
+
+    .item:hover {
+        flex-grow: 1;
+        font-size: 35px;
+    }
+
+    .container-img-wrap {
+         display: none;
+    }
+
+    .header-left {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .header-left span {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    .header-right{
+        font-size: 18px;
+    }
+
+
+}
